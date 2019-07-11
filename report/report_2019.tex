@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{url}
+\begin{document}
+\begin{center}
+  応用数理 I / 社会数理概論 I [盛田担当分] レポート課題\\
+  各問 1 個につき 5 点です(これ以外の課題も同様です). \\
+  いくつ答えてもよいですが提出枚数は 5 枚以内, 最高得点は 15 点です. \\
+  \url{https://github.com/morita-hm/lecture_2019} からダウンロードも可能です.\\
+  提出先/提出期限 : 多元数理教育支援室 7/26(金) 17:00
+\end{center}
+(課題 1 : 1 階微分方程式の解) $\mathbb{C}$に値をとる関数 $y$ とその微分 $'$ に対して
+\[ y(x) = \exp \left(\int^{x}_{0} a(u)du \right) \rightarrow \frac{y'(x)}{y(x)} = a(x) \]
+(課題 2) $\mathbb{C}$に値をとる関数 $y_1, y_2 (\neq 0)$ とその微分 $'$ に対して
+\[ y_1'(x) = a(x)y_1(x), y_2'(x) = a(x)y_2(x) \rightarrow (y_2^{-1}(x)y_1(x))' = 0 \]
+(課題 3 : Airy の微分方程式 - 梅村先生の著書から) \\
+$y_1,y_2$を Airy の微分方程式の互いに線型独立な解
+\[ y_1''(x) + xy_1(x) = 0, y_2''(x) + xy_2(x) = 0 \]
+とするとき,
+\[ \left(\det
+\begin{pmatrix}
+  y_1(x)  && y_2(x) \\
+  y_1'(x) && y_2'(x) 
+\end{pmatrix}\right)' = (y_1(x)y_2'(x) - y_2(x)y_1'(x))' = 0 \]
+(課題 4 : Riccati の微分方程式) $q$ を以下の微分方程式の解であるとする
+\[ q' + q^2 + \frac{t}{2} = 0 \]
+$q := \frac{u'}{u}$ とおくと
+\[ u'' + \frac{t}{2} u = 0 \]
+(課題 5 : Painlev\'e 第2方程式) $y=y(t)$ を未知関数として以下の微分方程式, 
+\[ y'' = 2y^3 + ty + b - \frac{1}{2} \]
+を考える($'$ : $t$ についての微分; $b \in \mathbb{C}$ : パラメータ)このとき,
+\[q := y, p := q' + q^2 + \frac{t}{2} \rightarrow q' = -p - q^2 - \frac{t}{2}, p' = 2qp + b \]
+(課題 6 : Painlev\'e 第2方程式, 対称形式) $q=q(t),p=p(t)$ を未知関数とする以下の微分方程式, 
+\[ q' = -p + q^2 + \frac{t}{2}, p' = 2qp + b \]
+に対して,
+\[f_1 := p, f_0 := -p + 2q^2 + t, f_0 + f_1 := t, \alpha_0 := 1 - b, \alpha_1 := b \]
+\[ \rightarrow f_0' = -2qf_0 + \alpha_0, f_1' = 2qf_1 + \alpha_1, q' = \frac{f_0 - f_1}{2} \]
+\newpage \noindent
+(課題 7) $\theta := x(d/dx)$ に対して $\theta x^n = n x^n$\\
+(課題 8) $\theta = x(d/dx)$ とするとき
+\[ F(x) = \sum^{\infty}_{n=0} \frac{(\alpha)_n(\beta)_n}{(\gamma)_n n!} x^n \]
+は以下の微分方程式を満たす
+\[ x^{-1}\theta(\theta + \gamma - 1)F - (\theta + \alpha)(\theta + \beta)F = 0\]
+(課題 9) 以下の微分方程式を満たす関数 $\Phi\begin{pmatrix}
+t_{11} & t_{12} & t_{13} & t_{14} \\
+t_{21} & t_{22} & t_{23} & t_{24}
+\end{pmatrix}$ を考える
+\[ x_{13} \frac{\partial \Phi}{\partial x_{13}} \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix} + x_{23} \frac{\partial \Phi}{\partial x_{23}} \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix}= \lambda_3 \Phi \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix}\]
+\[ f(t) := \Phi
+\begin{pmatrix}
+  1 & 0 & t y_{13} & y_{14} \\
+  0 & 1 & t y_{23} & y_{24}
+\end{pmatrix} \]
+とおいて $\frac{df}{dt}(t)$ を計算し $x_{13} = t y_{13}, x_{23} = t y_{23}, x_{14} = y_{14}, x_{24} = y_{24}$ と改めて置き換えることにより, 
+\[ t \frac{d}{dt} f(t) = \lambda_3 f(t) \]
+(課題 10 : Laplace 変換) $\mathbb{C}$ に値をとる関数 $y$ が $y(t) \to 0$, $\frac{d^n y}{dx^n} (x) \to 0$ ($n = 1,2, ...; t \to \infty$) であり
+\[ \mathcal{L}[y](s) := \int^{+\infty}_{0} y(t) e^{-st} dt \]
+であるとき
+\[ \mathcal{L}[\frac{d^{n+1}y}{dt^{n+1}}](s) = - \sum^{n}_{k=0} s^{k} \frac{d^{n-k}y}{dt^{n-k}}(0) + s^{n+1} \mathcal{L}[y](s) \quad (n \geq 0) \]
+(課題 11 : Laplace 変換) 
+\[ \int^{+\infty}_{0} e^{-t}\cos{t} dt = \frac{s+1}{s^2+2s+2} \]
+ヒント :
+\[ \cos{t} = \frac{1}{2} (e^{(-1+i)t} + e^{(-1-i)t}) \]
+(課題 12 : 逆 Laplace 変換) $f$ を複素関数として,
+\[\text{Res} (f(s), a) := \lim_{s \to \alpha} (s-\alpha)f(s)\]
+としたとき,
+\[ \text{Res} \left( \frac{s+1}{s^2+2s+2}e^{st}, -1+i \right) + \text{Res} \left( \frac{s+1}{s^2+2s+2}e^{st}, -1-i \right) = e^{-t}\cos{t} \]
+\newpage \noindent
+(課題 13 : 状態方程式の解) $x : I \to \mathbb{R}$, $u : I \to \mathbb{R}$, $a, b \in \mathbb{R}$ として
+\[ x(t) = \left( x(0) + \int^{t}_{0} e^{-a \tau} bu(\tau)d\tau \right) e^{at} \rightarrow x'(t) = ax(t) + bu(t) \]
+(課題 14 : 状態方程式の解) $x : I \to \mathbb{R}^n$, $u : I \to \mathbb{R}$, $A$ : $n$ 次正方行列, $B \in \mathbb{R}^n$ として
+\[ x(t) = e^{At} x(0) + \int^{t}_{0} e^{A(t-\tau)} Bu(\tau)d\tau \rightarrow x'(t) = Ax(t) + Bu(t) \]
+(課題 15 - 16) $X, Y, F$ を 2 次行列に値をとる $t$ の関数($\det X, \det Y \ne 0$), $'$ を微分として
+\[ (Y^{-1})'= -Y^{-1}Y'Y^{-1} \]
+\[ X'=FX, Y'=FY \to (Y^{-1}X)' = 0\] 
+(課題 17) 以下の微分方程式を満たす関数 $\Phi\begin{pmatrix}
+t_{11} & t_{12} & t_{13} & t_{14} \\
+t_{21} & t_{22} & t_{23} & t_{24}
+\end{pmatrix}$ を考える
+\[ x_{13} \frac{\partial \Phi}{\partial x_{13}} \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix} + x_{23} \frac{\partial \Phi}{\partial x_{23}} \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix}= \lambda_3 \Phi \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix}\]
+4次行列 $A = (a_{ij})_{i,j = 1,2,3,4}$ の $\Phi\begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix}$ への作用を
+\[ (A\Phi) \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix} := \lim_{\epsilon \to 0} \frac{1}{\epsilon} \left( \Phi \left( \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24} 
+\end{pmatrix} (1 + \epsilon A) \right) - \Phi \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24} 
+\end{pmatrix} \right) \]
+としたとき,
+$E_{ij}$ を (i,j) 成分が 1 で他は 0 の行列とすると,
+\[ (E_{33} \Phi) \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix} = \lambda_3 \Phi \begin{pmatrix}
+  1 & 0 & x_{13} & x_{14} \\
+  0 & 1 & x_{23} & x_{24}
+\end{pmatrix} \]
+\\
+(課題 18 - 22) 4次行列 $A,B$ に対して $[A,B] := AB - BA$\\
+$E_{ij}$ を (i,j) 成分が 1 で他は 0 の4次行列とするとき, 
+\[ [E_{ii}, E_{i,i+1}] = E_{i,i+1} \quad (i=1,2,3) \]
+\[ [E_{i+1,i+1}, E_{i,i+1}] = -E_{i,i+1} \quad (i=1,2,3) \]
+\[ [E_{ii}, E_{i+1,i}] = -E_{i+1,i} \quad (i=1,2,3) \]
+\[ [E_{i+1,i+1}, E_{i+1,i}] = E_{i+1,i} \quad (i=1,2,3) \]
+\[ [E_{i,i+1}, E_{j+1,j}] = \delta_{ij} (E_{ii} - E_{i+1,i+1}) \quad (i,j=1,2,3) \]
+($i=1$ の事例だけ示せば OK です, 1項目につき 5 点です).\\\\
+(課題 23)
+\[ \lim_{q \to 1} \frac{x^n - (qx)^n}{(1 - q)x} = nx^{n-1} \]
+\newpage \noindent
+(課題 24 : q 超幾何関数) $q^{\theta+c}x^n = q^{n+c}x^n$, $(x;q)_{n} := \prod^{n-1}_{k=0}(1-xq^k)$ $(n \geq 1)$; $(x;q)_0=1$ とする. このとき
+\[ \varphi(x) = \sum^{\infty}_{n=0} \frac{(q^{\alpha};q)_n(q^{\beta};q)_n}{(q^{\gamma};q)_n(q;q)_n}x^n \]
+は以下の $q$ 差分方程式を満たす.
+\[ x^{-1}(1-q^{\theta})(1-q^{\theta+\gamma-1})\varphi = (1-q^{\theta+\alpha})(1-q^{\theta+\beta})\varphi \]
+(課題 25 - 26 : 2017 年度 前期 数学演習 IX/X 6月23日分レポート問題\\
+\url{http://www.math.nagoya-u.ac.jp/~yanagida/17S/20170623.pdf}\\
+より)\\
+$\vartheta_4(z,q) = G(qe^{2iz};q^2)_{\infty}(qe^{-2iz};q^2)_{\infty}$\\
+$\vartheta_3(z,q) := \vartheta_4(z+\pi/2,q)$\\
+ただし $G \in \mathbb{C}, (x;q)_{\infty} := \prod^{\infty}_{n=0} (1 - xq^n)$ としたとき,
+\[ \vartheta_4(z,q) = G \prod^{\infty}_{n=1}(1-2q^{2n-1}\cos{2z}+q^{4n-2}) \]
+\[ \vartheta_3(z,q) = G \prod^{\infty}_{n=1}(1+2q^{2n-1}\cos{2z}+q^{4n-2}) \]
+(課題 27 - 32 : Painlev\'e 第 4 方程式) $f_0,f_1,f_2$ についての常微分方程式系
+\[ f_0 = f_0(f_1-f_2)+\alpha_0, f_1 = f_1(f_2-f_0)+\alpha_1, f_2 = f_2(f_0-f_1)+\alpha_2 \]
+が $f_0 + f_1 + f_2 = t$ であるとき, 
+\[ f_1' = f_1(f_1 + 2f_2- t) + \alpha_1 \]
+\[ f_2' = f_2(t - 2f_1 - f_2) + \alpha_2 \]
+\[ f_2 = \frac{(f_1' - \alpha_1)}{2f_1} + \frac{(t-f_1)}{2} \]
+\[ f_2' = \frac{t^2 - 4tf_1 - 2(f_1' - \alpha_1) + 3f_1^2}{4} - \frac{(f_1 - \alpha_1)^2}{4f_1^2} + \alpha_2 \]
+\[ f_1'' = f_1'(f_1 - 2f_2 - t) + f_1(f_1' - 2f_2' - 1) \]
+\[ f_1'' = \frac{f_1^2}{2f_1} + \frac{3f_1^3}{2} - 2tf_1^2 + \left(\frac{t^2}{2} + \alpha_1 + 2\alpha_2 - 1 \right)f_1 - \frac{\alpha_1^2}{2f_1} \]
+
+\newpage \noindent
+(課題 33-42) 以下の各講義で扱った話題, 配布した Sketch についての感想をまとめてください(複数提出可)
+\begin{itemize}
+\item 6/19 3 限
+\item 6/19 4 限
+\item 6/21 3 限
+\item 6/21 4 限
+\item 6/28 3 限
+\item 6/28 4 限
+\item 7/5  3 限
+\item 7/5  4 限
+\item 7/12  3 限
+\item 7/12  4 限
+\end{itemize}
+参考 : 以下のように講義で紹介した話題についてまとめても可能です(レポート1枚の内容につき 5 点とします)。
+\begin{itemize}
+\item ビアンキの恒等式について
+\item 統計力学でのエントロピーについて
+\item 移動平均フィルタについて
+\item LQR制御について
+\end{itemize}
+(課題 43) 現在参加している自主セミナーあれば, どのような問題を考えているセミナーかまとめてください.\\
+(課題 44) 現在, プログラミング/計算機に関する自主セミナーが各地で実施されていますが、そこで何について勉強したいか理由もつけてまとめてください。\\
+(課題 45) 今後、どのような(数学の)問題を考える自主セミナーに参加したいか, 理由もつけてまとめてください.\\
+(課題 46) 今後、「不確実なグローバル時代を乗り切るため」に自主セミナーでどのような話題を扱えばよいと思うか, 理由もつけてまとめてください.\\
+(課題 47) 「数学研究における古典数学の価値」についてみなさんの考えをまとめてください。\\
+\end{document}
