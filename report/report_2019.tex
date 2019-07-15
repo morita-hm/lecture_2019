@@ -121,13 +121,13 @@ $E_{ij}$ を (i,j) 成分が 1 で他は 0 の行列とすると,
 \end{pmatrix} \]
 \\
 (課題 18 - 22) 4次行列 $A,B$ に対して $[A,B] := AB - BA$\\
-$E_{ij}$ を (i,j) 成分が 1 で他は 0 の4次行列とするとき, 
+$E_{ij}$ を (i,j) 成分が 1 で他は 0 の4次行列とするとき, ($i=1$ の事例だけ示せば OK です, 1項目につき 5 点です).\\
 \[ [E_{ii}, E_{i,i+1}] = E_{i,i+1} \quad (i=1,2,3) \]
 \[ [E_{i+1,i+1}, E_{i,i+1}] = -E_{i,i+1} \quad (i=1,2,3) \]
 \[ [E_{ii}, E_{i+1,i}] = -E_{i+1,i} \quad (i=1,2,3) \]
 \[ [E_{i+1,i+1}, E_{i+1,i}] = E_{i+1,i} \quad (i=1,2,3) \]
 \[ [E_{i,i+1}, E_{j+1,j}] = \delta_{ij} (E_{ii} - E_{i+1,i+1}) \quad (i,j=1,2,3) \]
-($i=1$ の事例だけ示せば OK です, 1項目につき 5 点です).\\\\
+($\delta_{ij}$ はクロネッカーのデルタ).
 (課題 23)
 \[ \lim_{q \to 1} \frac{x^n - (qx)^n}{(1 - q)x} = nx^{n-1} \]
 \newpage \noindent
@@ -140,7 +140,7 @@ $E_{ij}$ を (i,j) 成分が 1 で他は 0 の4次行列とするとき,
 より)\\
 $\vartheta_4(z,q) = G(qe^{2iz};q^2)_{\infty}(qe^{-2iz};q^2)_{\infty}$\\
 $\vartheta_3(z,q) := \vartheta_4(z+\pi/2,q)$\\
-ただし $G \in \mathbb{C}, (x;q)_{\infty} := \prod^{\infty}_{n=0} (1 - xq^n)$ としたとき,
+ただし $G \in \mathbb{C}, (x;q)_{\infty} := \prod^{\infty}_{n=1} (1 - xq^{n-1})$ としたとき,
 \[ \vartheta_4(z,q) = G \prod^{\infty}_{n=1}(1-2q^{2n-1}\cos{2z}+q^{4n-2}) \]
 \[ \vartheta_3(z,q) = G \prod^{\infty}_{n=1}(1+2q^{2n-1}\cos{2z}+q^{4n-2}) \]
 (課題 27 - 32 : Painlev\'e 第 4 方程式) $f_0,f_1,f_2$ についての常微分方程式系
